@@ -27,7 +27,7 @@ const send = () => {
   message += `<b>Email: </b> ${email.value}\n`;
   message += `<b>Text: </b> ${text.value}`;
 
-  if (validation(this) === true) {
+  if (result) {
     alert("Successful");
     axios
       .post(URI_API.value, {
@@ -57,7 +57,7 @@ const send = () => {
     <h1 class="text-[58px] font-bold text-[#42446E] mb-5">Contact Me</h1>
     <form
       @submit.prevent
-      class="flex justify-between flex-col gap-5 p-4 border-2 mb-5 shadow-md"
+      class="flex justify-between flex-col gap-5 p-4 border-2 mb-5 shadow-lg rounded-[20px]"
     >
       <div class="flex justify-between flex-col">
         <label class="mb-2">Name</label>

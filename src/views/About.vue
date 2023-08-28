@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <div class="about w-full mt-16 lg:w-[60%]">
     <div class="mb-[38px]">
@@ -88,7 +90,7 @@
     </div>
     <div class="mb-[38px]">
       <h2 class="text-[42px] font-bold text-[#42446E] mb-[38px]">Education</h2>
-      <div>
+      <div class="border-b pb-6">
         <p class="text-[20px] text-[#666666] font-normal">
           Software Engineering
         </p>
