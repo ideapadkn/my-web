@@ -1,12 +1,13 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import { ref } from "vue";
 </script>
 
 <template>
   <div class="">
     <nav class="flex justify-between items-center h-[80px]">
       <Router-Link to="/" class="text-3xl font-semibold text-[#1E0E62]"
-        >LOGO</Router-Link
+        >ideapad</Router-Link
       >
       <ul class="flex gap-5">
         <li
@@ -33,3 +34,9 @@ import { RouterLink } from "vue-router";
     </nav>
   </div>
 </template>
+
+<style>
+.active {
+  color: #1e0e62;
+}
+</style>

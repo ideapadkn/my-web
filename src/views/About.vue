@@ -1,7 +1,7 @@
 <template>
   <div class="about w-full mt-16 lg:w-[60%]">
     <div class="mb-[38px]">
-      <h2 class="text-[42px] font-bold text-[#1E0E62] mb-[38px]">About Me</h2>
+      <h2 class="text-[42px] font-bold text-[#42446E] mb-[38px]">About Me</h2>
       <p class="text-[18px] font-normal text-[#666666]">
         I'm a Vue JS Developer<br />
         Open source is something I'm interested in. If you see a good move, try
@@ -9,10 +9,10 @@
       </p>
     </div>
     <div class="mb-[38px]">
-      <h2 class="text-[42px] font-bold text-[#1E0E62] mb-[38px]">
+      <h2 class="text-[42px] font-bold text-[#42446E] mb-[38px]">
         Work Experience
       </h2>
-      <div>
+      <div class="border-b pb-6">
         <p class="text-[20px] text-[#666666] font-normal">
           Junior Frontend Developer
         </p>
@@ -87,7 +87,7 @@
       </div>
     </div>
     <div class="mb-[38px]">
-      <h2 class="text-[42px] font-bold text-[#1E0E62] mb-[38px]">Education</h2>
+      <h2 class="text-[42px] font-bold text-[#42446E] mb-[38px]">Education</h2>
       <div>
         <p class="text-[20px] text-[#666666] font-normal">
           Software Engineering

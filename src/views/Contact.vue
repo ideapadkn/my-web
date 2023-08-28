@@ -54,10 +54,10 @@ const send = () => {
 
 <template>
   <div class="flex justify-center flex-col items-center h-[calc(100dvh-80px)]">
-    <h1 class="text-[58px] font-bold text-[#1E0E62] mb-5">Contact Me</h1>
+    <h1 class="text-[58px] font-bold text-[#42446E] mb-5">Contact Me</h1>
     <form
       @submit.prevent
-      class="flex justify-between flex-col gap-5 p-4 border-2 mb-5"
+      class="flex justify-between flex-col gap-5 p-4 border-2 mb-5 shadow-md"
     >
       <div class="flex justify-between flex-col">
         <label class="mb-2">Name</label>
@@ -86,7 +86,7 @@ const send = () => {
           v-model="text"
         />
       </div>
-      <button @click="send()" class="border-[#1E0E62] border-2 p-2">
+      <button @click="send()" class="border-[#42446E] border-2 p-2 hover:bg-[#42446E] hover:text-white transition-all ">
         Send
       </button>
     </form>
