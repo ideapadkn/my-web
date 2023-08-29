@@ -2,13 +2,14 @@
 import ProjectCart from "./ProjectCart.vue";
 import axios from "axios";
 import { onMounted, ref } from "vue";
-
+import db from "../../db";
 const websites = ref([]);
 
 const getData = async () => {
   try {
-    const res = await axios.get("../db.json");
-    websites.value = res.data.websites;
+    console.log("db", db);
+    // const res = await axios.get("../db.json");
+    // websites.value = res.data.websites;
     // console.log(res);
   } catch (e) {
     console.log(e);
@@ -29,7 +30,7 @@ onMounted(() => {
       </p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-      <ProjectCart v-for="web in websites" :key="web.id" :web="web" />
+      <ProjectCart v-for="web in db.websites" :key="web.id" :web="web" />
     </div>
   </div>
 </template>

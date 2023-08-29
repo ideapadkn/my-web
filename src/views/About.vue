@@ -16,7 +16,7 @@
       </h2>
       <div class="border-b pb-6">
         <p class="text-[20px] text-[#666666] font-normal">
-          Junior Frontend Developer
+          Junior Frontend Developer (Intership)
         </p>
         <div class="flex justify-between gap-6 items-center flex-wrap">
           <div class="flex gap-6 flex-wrap">
