@@ -60,7 +60,7 @@ const send = () => {
       class="flex justify-between flex-col gap-5 p-4 border-2 mb-5 shadow-lg rounded-[20px]"
     >
       <div class="flex justify-between flex-col">
-        <label class="mb-2">Name</label>
+        <label class="mb-2 font-semibold">Name</label>
         <input
           class="border-2 border-gray-400 outline-none p-2 text-gray-400"
           type="text"
@@ -69,7 +69,7 @@ const send = () => {
         />
       </div>
       <div class="flex justify-between flex-col">
-        <label class="mb-2">Email</label>
+        <label class="mb-2 font-semibold">Email</label>
         <input
           class="border-2 border-gray-400 outline-none p-2 text-gray-400 w-[300px]"
           type="email"
@@ -78,7 +78,7 @@ const send = () => {
         />
       </div>
       <div class="flex justify-between flex-col">
-        <label class="mb-2">Text</label>
+        <label class="mb-2 font-semibold">Text</label>
         <input
           class="border-2 border-gray-400 outline-none p-2 text-gray-400"
           type="text"
@@ -86,7 +86,10 @@ const send = () => {
           v-model="text"
         />
       </div>
-      <button @click="send()" class="border-[#42446E] border-2 p-2 hover:bg-[#42446E] hover:text-white transition-all ">
+      <button
+        @click="send()"
+        class="btn border-[#42446E] border-2 p-2 font-semibold hover:text-white transition-all relative"
+      >
         Send
       </button>
     </form>
@@ -149,3 +152,20 @@ const send = () => {
     </div>
   </div>
 </template>
+
+<style>
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 40px;
+  background-color: #42446e;
+  transition: all 1s;
+  z-index: -10;
+}
+.btn:hover::after {
+  width: 100%;
+}
+</style>

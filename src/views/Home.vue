@@ -2,13 +2,18 @@
 
 <template>
   <div class="mt-16 mb-[200px]">
-    <h1 class="text-[58px] font-bold text-[#42446E] mb-5">
+    <h1 class="text-[38px] sm:text-[58px] font-bold text-[#42446E] mb-5">
       Hi 👋,<br />
       My name is<br />
       <span class="span">Kamron</span><br />
       I make things for web
     </h1>
-    <a download class="inline-block bg-yellow-400 rounded-2xl p-3 text-white hover:translate-x-3 transition-all" href="../assets/cv/Kamron Karimov.pdf">Download CV</a>
+    <a
+      download
+      class="inline-block bg-yellow-400 rounded-2xl p-3 text-white hover:translate-x-3 transition-all"
+      href="../assets/cv/Kamron Karimov.pdf"
+      >Download CV</a
+    >
   </div>
   <div class="text-center">
     <h2 class="text-[48px] font-bold text-[#42446E]">My Tech Stack</h2>
