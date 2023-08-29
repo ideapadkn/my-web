@@ -1,6 +1,4 @@
-<script setup>
-import BurgerMenuItem from "./BurgerMenuItem.vue";
-</script>
+<script setup></script>
 
 <template>
   <div class="pb-6 mt-[100px]">
@@ -68,10 +66,7 @@ import BurgerMenuItem from "./BurgerMenuItem.vue";
         </div>
       </div>
     </div>
-    <div class="flex justify-between items-center">
-      <div class="flex gap-[45px]">
-        <BurgerMenuItem v-for="item in items" :key="item.id" :item="item" />
-      </div>
+    <div class="flex justify-center items-center">
       <p class="text-lg text-[#666]">
         Developed by <span>Karimov Kamron</span> © 2023
       </p>

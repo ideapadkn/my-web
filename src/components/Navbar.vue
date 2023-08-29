@@ -7,13 +7,14 @@ const isOpen = ref(false);
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
+  console.log('ok')
 };
 
 const items = reactive([
   { id: 1, title: "Home", link: "/" },
   { id: 2, title: "About", link: "/about" },
   { id: 3, title: "Projects", link: "/projects" },
-  { id: 4, title: "Contacts", link: "/contact" },
+  { id: 4, title: "Contact", link: "/contact" },
 ]);
 </script>
 
@@ -29,16 +30,10 @@ const items = reactive([
           <div class="w-[30px] h-[2px] bg-black mt-1 mb-1"></div>
           <div class="w-[30px] h-[2px] bg-black"></div>
         </div>
-        <div class="flex gap-[45px]">
+        <div class="gap-[45px] hidden md:flex">
           <BurgerMenuItem v-for="item in items" :key="item.id" :item="item" />
         </div>
       </div>
     </nav>
   </div>
 </template>
-
-<style>
-.open {
-  color: #1e0e62;
-}
-</style>
