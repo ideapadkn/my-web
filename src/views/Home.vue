@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import Skill from "../components/Skill.vue";
+import Projects from "../components/Projects.vue";
+</script>
 
 <template>
   <div class="mt-16 mb-[200px]">
@@ -15,19 +18,23 @@
       >Download CV</a
     >
   </div>
-  <div class="text-center">
+  <div class="text-center mb-[80px]">
     <h2 class="text-[48px] font-bold text-[#42446E]">My Tech Stack</h2>
-    <p class="text-[32px] text-[#666666] font-normal">
+    <p class="text-[32px] text-[#666666] font-normal mb-[96px]">
       Technologies I’ve been working with recently
     </p>
-    <div class="flex flex-wrap justify-between"></div>
+    <div class="flex flex-wrap justify-between">
+      <Skill />
+    </div>
+  </div>
+  <div>
+    <Projects />
   </div>
 </template>
 
 <style>
 span {
   transform: translateX(-50%) translateY(-50%);
-  font-size: 5rem;
   background-image: linear-gradient(
     45deg,
     #30cfd0 0%,

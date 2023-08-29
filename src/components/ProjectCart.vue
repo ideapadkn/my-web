@@ -28,9 +28,9 @@ onMounted(() => {
         Things I’ve built so far
       </p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
       <div
-        class="w-full  shadow-xl rounded-[20px] overflow-hidden"
+        class="w-full shadow-xl rounded-[20px] overflow-hidden"
         v-for="web in websites"
         :key="web.id"
       >
