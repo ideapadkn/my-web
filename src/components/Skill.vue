@@ -21,11 +21,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    class="grid grid-cols-1 gap-6"
-    v-for="skill in skills"
-    :key="skill.id"
-  >
+  <div class="grid grid-cols-1 gap-6" v-for="skill in skills" :key="skill.id">
     <img class="w-[100px] mb-5" :src="skill.img" alt="" />
   </div>
 </template>
