@@ -122,11 +122,6 @@
     },
     {
       "id": 12,
-      "name": "Gulp",
-      "img": "src/assets/images/skills/gulp.png"
-    },
-    {
-      "id": 13,
       "name": "Npm",
       "img": "src/assets/images/skills/npm.png"
     }

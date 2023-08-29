@@ -1,39 +1,16 @@
 <script setup>
-import axios from "axios";
-import { onMounted, ref } from "vue";
+import { defineProps } from "vue";
 
-const websites = ref([]);
-
-const getData = async () => {
-  try {
-    const res = await axios.get(`http://localhost:3000/websites`);
-
-    websites.value = res.data;
-    console.log(websites);
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-onMounted(() => {
-  getData();
+const props = defineProps({
+  web: Object,
+  required: true,
 });
 </script>
 
 <template>
   <div class="mb-[100px]">
-    <div class="text-center mb-[96px]">
-      <h2 class="text-[48px] font-bold text-[#42446E]">Projects</h2>
-      <p class="text-[32px] text-[#666666] font-normal">
-        Things I’ve built so far
-      </p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-      <div
-        class="w-full shadow-xl rounded-[20px] overflow-hidden"
-        v-for="web in websites"
-        :key="web.id"
-      >
+    <div>
+      <div class="w-full shadow-xl rounded-[20px] overflow-hidden">
         <div class="w-full h-[260px] bg-white overflow-hidden">
           <img :src="web.img" alt="" />
         </div>

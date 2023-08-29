@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import BurgerMenuItem from "./BurgerMenuItem.vue";
+</script>
 
 <template>
   <div class="pb-6 mt-[100px]">
@@ -67,28 +69,9 @@
       </div>
     </div>
     <div class="flex justify-between items-center">
-      <ul class="hidden md:flex gap-5">
-        <li
-          class="text-lg font-medium text-gray-500 hover:text-[#1E0E62] transition-all"
-        >
-          <Router-Link to="/"> Home </Router-Link>
-        </li>
-        <li
-          class="text-lg font-medium text-gray-500 hover:text-[#1E0E62] transition-all"
-        >
-          <Router-Link to="/about"> About </Router-Link>
-        </li>
-        <li
-          class="text-lg font-medium text-gray-500 hover:text-[#1E0E62] transition-all"
-        >
-          <Router-Link to="/projects"> Projects </Router-Link>
-        </li>
-        <li
-          class="text-lg font-medium text-gray-500 hover:text-[#1E0E62] transition-all"
-        >
-          <Router-Link to="/contact"> Contact </Router-Link>
-        </li>
-      </ul>
+      <div class="flex gap-[45px]">
+        <BurgerMenuItem v-for="item in items" :key="item.id" :item="item" />
+      </div>
       <p class="text-lg text-[#666]">
         Developed by <span>Karimov Kamron</span> © 2023
       </p>

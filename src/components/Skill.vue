@@ -7,9 +7,8 @@ const skills = ref([]);
 const getSkillsData = async () => {
   try {
     const res = await axios.get(`http://localhost:3000/skills`);
-
     skills.value = res.data;
-    console.log(skills);
+    // console.log(skills);
   } catch (e) {
     console.log(e);
   }
@@ -21,11 +20,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    class="grid grid-cols-1 gap-5"
-    v-for="skill in skills"
-    :key="skill.id"
-  >
+  <div class="grid grid-cols-1 gap-6" v-for="skill in skills" :key="skill.id">
     <img class="w-[100px] mb-5" :src="skill.img" alt="" />
   </div>
 </template>

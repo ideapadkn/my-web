@@ -1,46 +1,44 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { ref } from "vue";
+import { ref, reactive } from "vue";
+import BurgerMenuItem from "./BurgerMenuItem.vue";
 
-const menuVisible = ref(false);
-const openMenu = () => {
-  menuVisible.value = true;
+const isOpen = ref(false);
+
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
 };
+
+const items = reactive([
+  { id: 1, title: "Home", link: "/" },
+  { id: 2, title: "About", link: "/about" },
+  { id: 3, title: "Projects", link: "/projects" },
+  { id: 4, title: "Contacts", link: "/contact" },
+]);
 </script>
 
 <template>
   <div class="">
     <nav class="flex justify-between items-center h-[80px]">
-      <Router-Link to="/" class="text-3xl font-semibold text-[#1E0E62]"
-        >ideapad</Router-Link
+      <router-link to="/" class="text-3xl font-semibold text-[#1E0E62]"
+        >ideapad</router-link
       >
-      <ul class="hidden md:flex gap-5">
-        <li
-          class="text-[20px] font-medium text-gray-500 hover:text-[#1E0E62] transition-all"
-        >
-          <Router-Link to="/"> Home </Router-Link>
-        </li>
-        <li
-          class="text-[20px] font-medium text-gray-500 hover:text-[#1E0E62] transition-all"
-        >
-          <Router-Link to="/about"> About </Router-Link>
-        </li>
-        <li
-          class="text-[20px] font-medium text-gray-500 hover:text-[#1E0E62] transition-all"
-        >
-          <Router-Link to="/projects"> Projects </Router-Link>
-        </li>
-        <li
-          class="text-[20px] font-medium text-gray-500 hover:text-[#1E0E62] transition-all"
-        >
-          <Router-Link to="/contact"> Contact </Router-Link>
-        </li>
-      </ul>
-      <div class="block md:hidden">
-        <div class="w-[30px] h-[2px] bg-black"></div>
-        <div class="w-[30px] h-[2px] bg-black mt-1 mb-1"></div>
-        <div class="w-[30px] h-[2px] bg-black"></div>
+      <div :class="{ open: isOpen }">
+        <div class="block md:hidden" @click="toggleMenu">
+          <div class="w-[30px] h-[2px] bg-black"></div>
+          <div class="w-[30px] h-[2px] bg-black mt-1 mb-1"></div>
+          <div class="w-[30px] h-[2px] bg-black"></div>
+        </div>
+        <div class="flex gap-[45px]">
+          <BurgerMenuItem v-for="item in items" :key="item.id" :item="item" />
+        </div>
       </div>
     </nav>
   </div>
 </template>
+
+<style>
+.open {
+  color: #1e0e62;
+}
+</style>
