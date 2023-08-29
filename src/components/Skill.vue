@@ -6,8 +6,8 @@ const skills = ref([]);
 
 const getSkillsData = async () => {
   try {
-    const res = await axios.get(`http://localhost:3000/skills`);
-    skills.value = res.data;
+    const res = await axios.get("../db.json");
+    skills.value = res.data.skills;
     // console.log(skills);
   } catch (e) {
     console.log(e);

@@ -7,9 +7,9 @@ const websites = ref([]);
 
 const getData = async () => {
   try {
-    const res = await axios.get(`http://localhost:3000/websites`);
-    websites.value = res.data;
-    // console.log(websites);
+    const res = await axios.get("../db.json");
+    websites.value = res.data.websites;
+    // console.log(res);
   } catch (e) {
     console.log(e);
   }

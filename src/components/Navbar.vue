@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { ref, reactive } from "vue";
+import { ref } from "vue";
 import BurgerMenuItem from "./BurgerMenuItem.vue";
 
 const isOpen = ref(false);
@@ -11,7 +11,7 @@ const toggleMenu = () => {
   console.log(isOpen.value);
 };
 
-const items = reactive([
+const items = ref([
   { id: 1, title: "Home", link: "/" },
   { id: 2, title: "About", link: "/about" },
   { id: 3, title: "Projects", link: "/projects" },
