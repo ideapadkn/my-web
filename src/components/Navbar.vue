@@ -1,14 +1,12 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import { ref } from "vue";
-import BurgerMenuItem from "./BurgerMenuItem.vue";
+import MenuItem from "./MenuItem.vue";
 
 const isOpen = ref(false);
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
-  console.log("ok");
-  console.log(isOpen.value);
 };
 
 const items = ref([
@@ -68,7 +66,7 @@ const items = ref([
           </svg>
         </div>
         <div :class="{ open: isOpen }" class="gap-[45px] hidden md:flex">
-          <BurgerMenuItem
+          <MenuItem
             @click="isOpen = false"
             v-for="item in items"
             :key="item.id"

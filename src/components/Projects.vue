@@ -31,17 +31,18 @@ onMounted(() => {
         Things I’ve built so far
       </p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-10 md:gap-10"
+    >
+      <!-- <TransitionGroup> -->
       <ProjectCart v-for="web in websites" :key="web.id" :web="web" />
+      <!-- </TransitionGroup> -->
     </div>
     <!-- SPINNER ORBITS -->
     <div v-if="websites.length === 0" class="spinner-box">
       <div class="blue-orbit leo"></div>
-
       <div class="green-orbit leo"></div>
-
       <div class="red-orbit leo"></div>
-
       <div class="white-orbit w1 leo"></div>
       <div class="white-orbit w2 leo"></div>
       <div class="white-orbit w3 leo"></div>

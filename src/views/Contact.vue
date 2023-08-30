@@ -6,15 +6,15 @@ import axios from "axios";
 const name = ref("");
 const email = ref("");
 const text = ref("");
-const result = ref(true);
-function validation() {
-  if (name.value && email.value && text.value === "") {
-    result.value = false;
-    console.log("fdfd");
+
+const validation = () => {
+  if (name.value && email.value && text.value) {
+    return false;
   } else {
-    console.log("error");
+    return true;
   }
-}
+};
+console.log(validation());
 
 // FORM SEND
 const TOKEN = ref("6425163772:AAHyG88r7j4_Cp20JhKvFOtvQWbmh3wDjkg");
@@ -27,8 +27,8 @@ const send = () => {
   message += `<b>Email: </b> ${email.value}\n`;
   message += `<b>Text: </b> ${text.value}`;
 
-  if (result) {
-    alert("Successful");
+  if (validation()) {
+    // alert("Successful");
     axios
       .post(URI_API.value, {
         chat_id: CHAT_ID.value,

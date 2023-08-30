@@ -14,7 +14,7 @@ import Projects from "../components/Projects.vue";
     <a
       download
       class="inline-block bg-yellow-400 rounded-2xl p-3 text-white hover:translate-x-3 transition-all"
-      href="../assets/cv/Kamron Karimov.pdf"
+      href="./assets/cv/Kamron Karimov.pdf"
       >Download CV</a
     >
   </div>
