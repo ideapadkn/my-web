@@ -52,12 +52,12 @@ onMounted(() => {
 <style>
 /* ALTERNATING ORBITS */
 .spinner-box {
-  width: 98dvw;
-  height: 300px;
+  width: 98vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  padding: 50px;
 }
 .leo {
   position: absolute;

@@ -68,7 +68,12 @@ const items = ref([
           </svg>
         </div>
         <div :class="{ open: isOpen }" class="gap-[45px] hidden md:flex">
-          <BurgerMenuItem @click="isOpen = false" v-for="item in items" :key="item.id" :item="item" />
+          <BurgerMenuItem
+            @click="isOpen = false"
+            v-for="item in items"
+            :key="item.id"
+            :item="item"
+          />
         </div>
       </div>
     </nav>
