@@ -6,8 +6,23 @@
       <h2 class="text-[42px] font-bold text-[#42446E] mb-[38px]">About Me</h2>
       <p class="text-[18px] font-normal text-[#666666]">
         I'm a Vue JS Developer<br />
-        Open source is something I'm interested in. If you see a good move, try
-        to find an even better one.
+        Open source is something I'm interested in.<br />
+        - Knowledge of the Vue.js framework and its ecosystem (Vue Router,
+        Vuex).<br />
+        - Knowledge of HTML, CSS and experience in creating responsive web
+        interfaces.<br />
+        - Experience with JavaScript (ES6+) and good command of modern
+        JavaScript functions and array methods.<br />
+        - Using Axios to interact with RESTful APIs.<br />
+        - Understanding the principles of component architecture and its
+        application in Vue.js.<br />
+        - Experience in layout using CSS Flexbox and Grid.<br />
+        - Basic knowledge of Git and ability to work with version control
+        systems.<br />
+        <!-- - Additionally: Tailwind, Sass, Bootstrap, Gulp, Pinia, ElementPlus,
+        Vue-Material-Desing-Icons, Vite, Gitlab, NPM, YARN, Telegram API  
+        If you see a good move, try to find an even better one. -->
+        Vue JS is an area I'm focusing on right now.
       </p>
     </div>
     <div class="mb-[38px]">

@@ -7,8 +7,8 @@ const name = ref("");
 const email = ref("");
 const text = ref("");
 
-const validation = () => {
-  if (name.value && email.value && text.value) {
+function validation() {
+  if (name.value && email.value && text.value == "") {
     return false;
   } else {
     return true;

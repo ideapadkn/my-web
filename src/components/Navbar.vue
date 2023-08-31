@@ -20,9 +20,12 @@ const items = ref([
 <template>
   <div class="">
     <nav class="flex justify-between items-center h-[80px]">
-      <router-link to="/" class="text-3xl font-semibold text-[#1E0E62]"
-        >ideapad</router-link
+      <router-link
+        to="/"
+        class="text-3xl font-semibold text-[#1E0E62] relative"
       >
+        ideapad
+      </router-link>
       <div>
         <div v-if="isOpen" @click="toggleMenu" class="block md:hidden">
           <svg
