@@ -2,11 +2,11 @@
 import { ref } from "vue";
 import axios from "axios";
 
-/*
-// FORM VALIDATION
 const name = ref("");
 const email = ref("");
 const text = ref("");
+/*
+// FORM VALIDATION
 
 function validation() {
   if (name.value && email.value && text.value == "") {
