@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import axios from "axios";
 
+/*
 // FORM VALIDATION
 const name = ref("");
 const email = ref("");
@@ -15,6 +16,7 @@ function validation() {
   }
 };
 console.log(validation());
+*/
 
 // FORM SEND
 const TOKEN = ref("6425163772:AAHyG88r7j4_Cp20JhKvFOtvQWbmh3wDjkg");
@@ -27,7 +29,7 @@ const send = () => {
   message += `<b>Email: </b> ${email.value}\n`;
   message += `<b>Text: </b> ${text.value}`;
 
-  if (validation()) {
+  if (true) {
     // alert("Successful");
     axios
       .post(URI_API.value, {
