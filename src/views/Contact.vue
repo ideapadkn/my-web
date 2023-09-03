@@ -3,13 +3,13 @@ import { ref } from "vue";
 import axios from "axios";
 
 const name = ref("");
-const email = ref("");
+const number = ref("");
 const text = ref("");
 /*
 // FORM VALIDATION
 
 function validation() {
-  if (name.value && email.value && text.value == "") {
+  if (name.value && number.value && text.value == "") {
     return false;
   } else {
     return true;
@@ -26,7 +26,7 @@ const URI_API = ref(`https://api.telegram.org/bot${TOKEN.value}/sendMessage`);
 const send = () => {
   let message = `<b>Someone wrote to you: </b>\n\n`;
   message += `<b>Name: </b> ${name.value}\n`;
-  message += `<b>Email: </b> ${email.value}\n`;
+  message += `<b>Number: </b> ${number.value}\n`;
   message += `<b>Text: </b> ${text.value}`;
 
   if (true) {
@@ -39,7 +39,7 @@ const send = () => {
       })
       .then((res) => {
         name.value = "";
-        email.value = "";
+        number.value = "";
         text.value = "";
       })
       .catch((err) => {
@@ -65,7 +65,6 @@ const send = () => {
         <input
           class="input border-b p-2 outline-none w-full bg-transparent"
           type="text"
-          name="name"
           v-model="name"
         />
         <label
@@ -76,11 +75,12 @@ const send = () => {
       <div class="flex justify-between flex-col relative">
         <input
           class="input border-b p-2 outline-none w-full bg-transparent"
-          type="email"
-          v-model="email"
+          type="tel"
+          v-model="number"
         />
-        <label class="label mb-2 font-semibold absolute left-0 bottom-0"
-          >Email</label
+        <label
+          class="label mb-2 font-semibold absolute left-0 bottom-0 transition-all"
+          >Phone Number</label
         >
       </div>
       <div class="flex justify-between flex-col relative">

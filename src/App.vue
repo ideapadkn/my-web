@@ -1,11 +1,18 @@
 <script setup>
 import { RouterView } from "vue-router";
+import { ref } from "vue";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
+
+const visible = ref(false);
+
+setTimeout(() => {
+  visible.value = true;
+}, 4000);
 </script>
 
 <template>
-  <div class="container mx-auto px-5">
+  <div v-if="visible" class="container mx-auto px-5">
     <Navbar />
     <RouterView />
     <Footer />
@@ -24,9 +31,27 @@ import Footer from "./components/Footer.vue";
       </ul>
     </div>
   </div>
+  <div v-else>
+    <div class="spinner-box">
+      <div class="blue-orbit leo"></div>
+      <div class="green-orbit leo"></div>
+      <div class="red-orbit leo"></div>
+      <div class="white-orbit w1 leo"></div>
+      <div class="white-orbit w2 leo"></div>
+      <div class="white-orbit w3 leo"></div>
+    </div>
+  </div>
 </template>
 
-<style>
+<style scoped>
+.spinner-box {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 50px;
+}
 .area {
   width: 100%;
 }
