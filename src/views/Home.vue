@@ -5,7 +5,7 @@ import Projects from "../components/Projects.vue";
 
 <template>
   <div class="mt-16 mb-[200px]">
-    <h1 class="text-[38px] sm:text-[58px] font-bold text-[#42446E] mb-5">
+    <h1 class="title text-[38px] sm:text-[58px] font-bold text-[#42446E] mb-5">
       Hi 👋,<br />
       My name is<br />
       <span class="span">Kamron</span><br />
