@@ -18,7 +18,7 @@ const items = ref([
 </script>
 
 <template>
-  <div class="">
+  <div>
     <nav class="flex justify-between items-center h-[80px]">
       <router-link
         to="/"

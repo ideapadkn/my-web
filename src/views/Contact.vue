@@ -59,58 +59,164 @@ const send = () => {
     <h1 class="text-[58px] font-bold text-[#42446E] mb-5">Contact Me</h1>
     <form
       @submit.prevent
-      class="flex justify-between flex-col gap-5 p-4 border-2 mb-5 shadow-lg rounded-[20px]"
+      class="flex justify-between flex-col gap-5 py-8 px-4 border-2 mb-5 shadow-lg rounded-[20px] w-[300px]"
     >
-      <div class="flex justify-between flex-col">
-        <label class="mb-2 font-semibold">Name</label>
+      <div class="flex justify-between flex-col relative">
         <input
-          class="border-2 border-gray-400 outline-none p-2 text-gray-400"
+          class="input border-b p-2 outline-none w-full bg-transparent"
           type="text"
-          placeholder="Your name"
+          name="name"
           v-model="name"
         />
+        <label
+          class="label mb-2 font-semibold absolute left-0 bottom-0 transition-all"
+          >Name</label
+        >
       </div>
-      <div class="flex justify-between flex-col">
-        <label class="mb-2 font-semibold">Email</label>
+      <div class="flex justify-between flex-col relative">
         <input
-          class="border-2 border-gray-400 outline-none p-2 text-gray-400 w-[300px]"
+          class="input border-b p-2 outline-none w-full bg-transparent"
           type="email"
-          placeholder="Your email"
           v-model="email"
         />
+        <label class="label mb-2 font-semibold absolute left-0 bottom-0"
+          >Email</label
+        >
       </div>
-      <div class="flex justify-between flex-col">
-        <label class="mb-2 font-semibold">Text</label>
+      <div class="flex justify-between flex-col relative">
         <input
-          class="border-2 border-gray-400 outline-none p-2 text-gray-400"
+          class="input border-b p-2 outline-none w-full bg-transparent"
           type="text"
-          placeholder="Your text"
           v-model="text"
         />
+        <label class="label mb-2 font-semibold absolute left-0 bottom-0"
+          >Text</label
+        >
       </div>
-      <button
-        @click="send()"
-        class="btn border-[#42446E] border-2 p-2 font-semibold hover:text-white transition-all relative"
-      >
+      <a @click="send()" class="cursor-pointer">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         Send
-      </button>
+      </a>
     </form>
   </div>
 </template>
 
-<style>
-.btn::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 40px;
-  background-color: #42446e;
-  transition: all 1s;
-  z-index: -10;
+<style scoped>
+.label {
+  transition: all 0.5s;
 }
-.btn:hover::after {
+.input:valid ~ .label {
+  top: -15px;
+  left: 0;
+  color: #42446e;
+  font-size: 14px;
+}
+a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #42446e;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+a:hover {
+  background: #42446e;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 1px #42446e, 0 0 10px #42446e, 0 0 15px #42446e,
+    0 0 20px #42446e;
+}
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+a span:nth-child(1) {
+  top: 0;
+  left: -100%;
   width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #42446e);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #42446e);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #42446e);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #42446e);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
 }
 </style>
