@@ -53,7 +53,7 @@ onMounted(() => {
 <style>
 /* ALTERNATING ORBITS */
 .spinner-box {
-  width: 98vw;
+  width: 97vw;
   display: flex;
   justify-content: center;
   align-items: center;
