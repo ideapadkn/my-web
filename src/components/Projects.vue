@@ -9,7 +9,9 @@ const getData = () => {
   try {
     // console.log("db", db);
     setTimeout(async () => {
-      const res = await axios.get("../db.json");
+      const res = await axios.get(
+        "https://mocki.io/v1/ed3bd011-0aa4-4db8-8c71-7443c3f2e12d"
+      );
       websites.value = res.data.websites;
     }, 2000);
     // console.log(res);
