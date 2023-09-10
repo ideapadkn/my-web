@@ -4,10 +4,11 @@ import { onMounted, ref } from "vue";
 // import db from "../../db";
 
 const skills = ref([]);
+const API = ref(import.meta.env.VITE_API_KEY);
 
 const getSkillsData = async () => {
   try {
-    const res = await axios.get("../db.json");
+    const res = await axios.get(API.value);
     skills.value = res.data.skills;
     // console.log(skills);
   } catch (e) {
@@ -21,11 +22,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    class="grid grid-cols-1 gap-6"
-    v-for="skill in skills"
-    :key="skill.id"
-  >
+  <div class="grid grid-cols-1 gap-6" v-for="skill in skills" :key="skill.id">
     <img class="w-[100px] mb-5" :src="skill.img" alt="" />
   </div>
 </template>

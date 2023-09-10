@@ -4,11 +4,12 @@ import axios from "axios";
 import { onMounted, ref } from "vue";
 // import db from "../../db";
 const websites = ref([]);
+const API = ref(import.meta.env.VITE_API_KEY);
 
 const getData = async () => {
   try {
     // console.log("db", db);
-    const res = await axios.get("../db.json");
+    const res = await axios.get(API.value);
     websites.value = res.data.websites;
     console.log(res);
   } catch (e) {

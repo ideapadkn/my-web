@@ -17,8 +17,8 @@ function validation() {
 }
 
 // FORM SEND
-const TOKEN = ref("6425163772:AAHyG88r7j4_Cp20JhKvFOtvQWbmh3wDjkg");
-const CHAT_ID = ref("-1001917766838");
+const TOKEN = ref(import.meta.env.VITE_BOT_TOKEN);
+const CHAT_ID = ref(import.meta.env.VITE_CHAT_ID);
 const URI_API = ref(`https://api.telegram.org/bot${TOKEN.value}/sendMessage`);
 
 const send = () => {
