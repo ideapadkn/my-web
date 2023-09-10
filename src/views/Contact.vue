@@ -9,7 +9,7 @@ const text = ref("");
 // FORM VALIDATION
 
 // FORM SEND
-const TOKEN = ref("https://mocki.io/v1/0d0c6a89-6594-4344-a3fa-3459c8793993");
+const TOKEN = ref("6425163772:AAHyG88r7j4_Cp20JhKvFOtvQWbmh3wDjkg");
 const CHAT_ID = ref("-1001917766838");
 const URI_API = ref(`https://api.telegram.org/bot${TOKEN.value}/sendMessage`);
 
