@@ -12,9 +12,9 @@ import Projects from "../components/Projects.vue";
       I make things for web
     </h1>
     <a
-      download
+      target="_blank"
       class="inline-block bg-yellow-400 rounded-2xl p-3 text-white hover:translate-x-3 transition-all"
-      href="./assets/cv/Kamron Karimov.pdf"
+      href="https://ideapadkn.netlify.app/cv/Kamron%20Karimov.pdf"
       >Download CV</a
     >
   </div>
