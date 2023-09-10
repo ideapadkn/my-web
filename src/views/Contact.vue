@@ -9,8 +9,8 @@ const text = ref("");
 // FORM VALIDATION
 
 // FORM SEND
-const TOKEN = ref(import.meta.env.VITE_BOT_TOKEN);
-const CHAT_ID = ref(import.meta.env.VITE_CHAT_ID);
+const TOKEN = ref("https://mocki.io/v1/0d0c6a89-6594-4344-a3fa-3459c8793993");
+const CHAT_ID = ref("-1001917766838");
 const URI_API = ref(`https://api.telegram.org/bot${TOKEN.value}/sendMessage`);
 
 const send = () => {
