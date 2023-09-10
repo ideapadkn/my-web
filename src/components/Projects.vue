@@ -2,19 +2,17 @@
 import ProjectCart from "./ProjectCart.vue";
 import axios from "axios";
 import { onMounted, ref } from "vue";
-// import db from "../../db";
+
 const websites = ref([]);
 
 const getData = () => {
   try {
-    // console.log("db", db);
     setTimeout(async () => {
       const res = await axios.get(
         "https://mocki.io/v1/0d0c6a89-6594-4344-a3fa-3459c8793993"
       );
       websites.value = res.data.websites;
     }, 2000);
-    // console.log(res);
   } catch (e) {
     console.log(e);
   }
@@ -36,9 +34,7 @@ onMounted(() => {
     <div
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-10 md:gap-10"
     >
-      <!-- <TransitionGroup> -->
       <ProjectCart v-for="web in websites" :key="web.id" :web="web" />
-      <!-- </TransitionGroup> -->
     </div>
     <!-- SPINNER ORBITS -->
     <div v-if="websites.length === 0" class="spinner-box">

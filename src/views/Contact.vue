@@ -5,18 +5,8 @@ import axios from "axios";
 const name = ref("");
 const number = ref("");
 const text = ref("");
-/*
-// FORM VALIDATION
 
-function validation() {
-  if (name.value && number.value && text.value == "") {
-    return false;
-  } else {
-    return true;
-  }
-};
-console.log(validation());
-*/
+// FORM VALIDATION
 
 // FORM SEND
 const TOKEN = ref("6425163772:AAHyG88r7j4_Cp20JhKvFOtvQWbmh3wDjkg");

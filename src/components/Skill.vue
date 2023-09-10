@@ -1,7 +1,6 @@
 <script setup>
 import axios from "axios";
 import { onMounted, ref } from "vue";
-// import db from "../../db";
 
 const skills = ref([]);
 
@@ -11,7 +10,6 @@ const getSkillsData = async () => {
       "https://mocki.io/v1/0d0c6a89-6594-4344-a3fa-3459c8793993"
     );
     skills.value = res.data.skills;
-    // console.log(skills);
   } catch (e) {
     console.log(e);
   }
