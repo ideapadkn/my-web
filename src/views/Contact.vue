@@ -45,7 +45,7 @@ const send = () => {
 </script>
 
 <template>
-  <div class="flex justify-center flex-col items-center h-[calc(100dvh-80px)]">
+  <div class="flex justify-center flex-col items-center">
     <h1 class="text-[58px] font-bold text-[#42446E] mb-5">Contact Me</h1>
     <form
       @submit.prevent
