@@ -9,9 +9,11 @@ const API = ref(import.meta.env.VITE_API_KEY);
 const getData = () => {
   try {
     setTimeout(async () => {
-      const res = await axios.get("https://mocki.io/v1/0d0c6a89-6594-4344-a3fa-3459c8793993");
+      const res = await axios.get(
+        "https://mocki.io/v1/0d0c6a89-6594-4344-a3fa-3459c8793993"
+      );
       websites.value = res.data.websites;
-    }, 2000);
+    }, 1500);
   } catch (e) {
     console.log(e);
   }
