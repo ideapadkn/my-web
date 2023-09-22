@@ -8,7 +8,7 @@ const visible = ref(false);
 
 setTimeout(() => {
   visible.value = true;
-}, 4000);
+}, 0);
 </script>
 
 <template>

@@ -32,9 +32,7 @@ onMounted(() => {
         Things I’ve built so far
       </p>
     </div>
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-10 md:gap-10"
-    >
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-10 md:gap-10">
       <ProjectCart v-for="web in websites" :key="web.id" :web="web" />
     </div>
     <!-- SPINNER ORBITS -->
@@ -52,7 +50,6 @@ onMounted(() => {
 <style>
 /* ALTERNATING ORBITS */
 .spinner-box {
-  width: 97vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,11 +90,9 @@ onMounted(() => {
 .w1 {
   transform: rotate3D(1, 1, 1, 90deg);
 }
-
 .w2 {
   transform: rotate3D(1, 2, 0.5, 90deg);
 }
-
 .w3 {
   transform: rotate3D(0.5, 1, 2, 90deg);
 }
@@ -108,5 +103,4 @@ onMounted(() => {
   to {
     transform: rotate3d(0deg);
   }
-}
-</style>
+}</style>

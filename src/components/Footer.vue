@@ -87,7 +87,7 @@
       </div>
     </div>
     <div class="flex justify-center items-center">
-      <p class="text-lg text-[#666]">
+      <p class="text-[16px] sm:text-lg text-[#666]">
         Developed by <span>Karimov Kamron</span> © 2023
       </p>
     </div>

@@ -8,6 +8,14 @@ const text = ref("");
 
 // FORM VALIDATION
 
+const formValidation = () => {
+  if (name.value === '' || number.value === '' || text.value === '') {
+    return false
+  } else {
+    return true
+  }
+}
+
 // FORM SEND
 const TOKEN = ref("6425163772:AAHyG88r7j4_Cp20JhKvFOtvQWbmh3wDjkg");
 const CHAT_ID = ref("-1001917766838");
@@ -19,7 +27,7 @@ const send = () => {
   message += `<b>Number: </b> ${number.value}\n`;
   message += `<b>Text: </b> ${text.value}`;
 
-  if (true) {
+  if (formValidation()) {
     // alert("Successful");
     axios
       .post(URI_API.value, {
@@ -40,6 +48,7 @@ const send = () => {
       });
   } else {
     console.log("error");
+    alert('Please enter text')
   }
 };
 </script>
@@ -47,41 +56,19 @@ const send = () => {
 <template>
   <div class="flex justify-center flex-col items-center">
     <h1 class="text-[58px] font-bold text-[#42446E] mb-5">Contact Me</h1>
-    <form
-      @submit.prevent
-      class="flex justify-between flex-col gap-5 py-8 px-4 border-2 mb-5 shadow-lg rounded-[20px] w-[300px]"
-    >
+    <form @submit.prevent
+      class="flex justify-between flex-col gap-5 py-8 px-4 border-2 mb-5 shadow-lg rounded-[20px] w-[300px]">
       <div class="flex justify-between flex-col relative">
-        <input
-          class="input border-b p-2 outline-none w-full bg-transparent"
-          type="text"
-          v-model="name"
-        />
-        <label
-          class="label mb-2 font-semibold absolute left-0 bottom-0 transition-all"
-          >Name</label
-        >
+        <input class="input border-b p-2 outline-none w-full bg-transparent" type="text" v-model="name" />
+        <label class="label mb-2 font-semibold absolute left-0 bottom-0 transition-all">Name</label>
       </div>
       <div class="flex justify-between flex-col relative">
-        <input
-          class="input border-b p-2 outline-none w-full bg-transparent"
-          type="tel"
-          v-model="number"
-        />
-        <label
-          class="label mb-2 font-semibold absolute left-0 bottom-0 transition-all"
-          >Phone Number</label
-        >
+        <input class="input border-b p-2 outline-none w-full bg-transparent" type="tel" v-model="number" />
+        <label class="label mb-2 font-semibold absolute left-0 bottom-0 transition-all">Phone Number</label>
       </div>
       <div class="flex justify-between flex-col relative">
-        <input
-          class="input border-b p-2 outline-none w-full bg-transparent"
-          type="text"
-          v-model="text"
-        />
-        <label class="label mb-2 font-semibold absolute left-0 bottom-0"
-          >Text</label
-        >
+        <input class="input border-b p-2 outline-none w-full bg-transparent" type="text" v-model="text" />
+        <label class="label mb-2 font-semibold absolute left-0 bottom-0">Text</label>
       </div>
       <a @click="send()" class="cursor-pointer">
         <span></span>
@@ -98,12 +85,14 @@ const send = () => {
 .label {
   transition: all 0.5s;
 }
-.input:valid ~ .label {
+
+.input:valid~.label {
   top: -15px;
   left: 0;
   color: #42446e;
   font-size: 14px;
 }
+
 a {
   position: relative;
   display: inline-block;
@@ -144,6 +133,7 @@ a span:nth-child(1) {
   0% {
     left: -100%;
   }
+
   50%,
   100% {
     left: 100%;
@@ -164,6 +154,7 @@ a span:nth-child(2) {
   0% {
     top: -100%;
   }
+
   50%,
   100% {
     top: 100%;
@@ -184,6 +175,7 @@ a span:nth-child(3) {
   0% {
     right: -100%;
   }
+
   50%,
   100% {
     right: 100%;
@@ -204,6 +196,7 @@ a span:nth-child(4) {
   0% {
     bottom: -100%;
   }
+
   50%,
   100% {
     bottom: 100%;

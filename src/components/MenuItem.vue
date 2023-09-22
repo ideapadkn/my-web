@@ -5,12 +5,6 @@ import { RouterLink } from "vue-router";
 const props = defineProps({
   item: Object,
 });
-// const isActive = ref(false);
-// const toggleActive = () => {
-//   isActive.value = !isActive.value;
-//   console.log("fef");
-//   console.log(isActive.value);
-// };
 </script>
 
 <template>
