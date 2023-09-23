@@ -5,7 +5,6 @@ import { onMounted, ref } from "vue";
 const skills = ref([]);
 const API = ref(import.meta.env.VITE_API_KEY);
 
-
 const getSkillsData = async () => {
   try {
     const res = await axios.get("https://mocki.io/v1/0d0c6a89-6594-4344-a3fa-3459c8793993");

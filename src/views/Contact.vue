@@ -7,7 +7,6 @@ const number = ref("");
 const text = ref("");
 
 // FORM VALIDATION
-
 const formValidation = () => {
   if (name.value === '' || number.value === '' || text.value === '') {
     return false
