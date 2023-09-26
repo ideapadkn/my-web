@@ -11,8 +11,8 @@ const props = defineProps({
   <div class="mb-[100px]">
     <div>
       <div class="w-full shadow-xl rounded-[20px] overflow-hidden">
-        <div class="w-full h-[260px] bg-white overflow-hidden">
-          <img :src="web.img" alt="" />
+        <div class="w-full h-[260px] bg-white overflow-hidden cursor-pointer">
+          <img class="hover:scale-110 transition-all" :src="web.img" alt="" />
         </div>
         <div class="p-[27px]">
           <h3 class="fz-[28px] font-medium text-black mb-[17px]">
