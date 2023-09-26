@@ -12,7 +12,7 @@ import Projects from "../components/Projects.vue";
       I make things for web
     </h1>
     <a target="_blank" class="inline-block bg-yellow-400 rounded-2xl p-3 text-white hover:translate-x-3 transition-all"
-      href="#">Download CV</a>
+      href="https://github.com/ideapadkn/my-web/blob/main/src/assets/cv/Karimov%20Kamron.pdf">Download CV</a>
   </div>
   <div class="text-center mb-[80px]">
     <h2 class="text-[48px] font-bold text-[#42446E]">My Tech Stack</h2>
