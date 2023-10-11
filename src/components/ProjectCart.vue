@@ -12,10 +12,10 @@ const props = defineProps({
     <div>
       <div class="w-full shadow-xl rounded-[20px] overflow-hidden">
         <div class="w-full h-[260px] bg-white overflow-hidden cursor-pointer">
-          <img class="hover:scale-110 transition-all" :src="web.img" alt="" />
+          <img class="project__cart-img hover:scale-110" :src="web.img" alt="" />
         </div>
         <div class="p-[27px]">
-          <h3 class="fz-[28px] font-medium text-black mb-[17px]">
+          <h3 class="project__cart-name fz-[28px] font-medium text-black mb-[17px]">
             {{ web.name }}
           </h3>
           <p class="fz-[18px] text-[#666666] font-light mb-[12px]">
@@ -60,3 +60,9 @@ const props = defineProps({
     </div>
   </div>
 </template>
+
+<style scoped>
+.project__cart-img {
+  transition: all 1s;
+}
+</style>

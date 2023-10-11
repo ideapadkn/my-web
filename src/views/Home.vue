@@ -11,7 +11,8 @@ import Projects from "../components/Projects.vue";
       <span class="span">Kamron</span><br />
       I make things for web
     </h1>
-    <a target="_blank" class="inline-block bg-yellow-400 rounded-2xl p-3 text-white hover:translate-x-3 transition-all"
+    <a target="_blank"
+      class="cv-btn inline-block bg-yellow-400 hover:bg-yellow-500 rounded-2xl p-3 text-white hover:translate-x-3"
       href="https://github.com/ideapadkn/my-web/blob/main/src/assets/cv/Karimov%20Kamron.pdf">Download CV</a>
   </div>
   <div class="text-center mb-[80px]">
@@ -47,6 +48,10 @@ import Projects from "../components/Projects.vue";
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: #f9f9fd;
+}
+
+.cv-btn {
+  transition: all .5s;
 }
 
 span {
