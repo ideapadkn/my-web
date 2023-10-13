@@ -21,7 +21,11 @@
         systems.<br />
         <!-- - Additionally: Tailwind, Sass, Bootstrap, Gulp, Pinia, ElementPlus,
         Vue-Material-Desing-Icons, Vite, Gitlab, NPM, YARN, Telegram API  
-        If you see a good move, try to find an even better one. -->
+        If you see a good move, try to find an even better one. 
+        
+          https://www.youtube.com/watch?v=doUZK-HFRHs - film dom
+
+        -->  
         Vue JS is an area I'm focusing on right now.
       </p>
     </div>

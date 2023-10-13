@@ -24,6 +24,10 @@ const items = ref([
         ideapad
       </router-link>
       <div>
+        <a class="text-[#1E0E62] font-semibold border-b-2 border-[#1E0E62]" target="_blank"
+          href="https://gamejskn.netlify.app/">TryMyParticleEffect</a>
+      </div>
+      <div>
         <div v-if="isOpen" @click="toggleMenu" class="block md:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px">
             <path
