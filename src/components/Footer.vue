@@ -1,10 +1,10 @@
 <script setup></script>
 
 <template>
-  <div class="pb-6 mt-[100px]">
+  <div class="pb-6 mt-12 md:mt-[100px]">
     <div class="border-b pb-6 flex justify-between items-center mb-5">
       <div class="hidden md:block text-lg">ideapad</div>
-      <div class="flex gap-[45px] items-center flex-wrap">
+      <div class="flex gap-3 sm:gap-[45px] items-center flex-wrap">
         <p class="text-lg">+998 90 509 64 29</p>
         <p class="text-lg">ideapadkn@gmail.com</p>
         <div class="flex gap-5 items-center">

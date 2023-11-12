@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="mb-[100px]">
+  <div>
     <div>
       <div class="w-full shadow-xl rounded-[20px] overflow-hidden">
         <div class="w-full h-[260px] bg-white overflow-hidden cursor-pointer">

@@ -7,7 +7,7 @@ const API = ref(import.meta.env.VITE_API_KEY);
 
 const getSkillsData = async () => {
   try {
-    const res = await axios.get("https://mocki.io/v1/0d0c6a89-6594-4344-a3fa-3459c8793993");
+    const res = await axios.get("https://mocki.io/v1/d25c5df7-1bd2-4977-bdf8-debf954ac940");
     skills.value = res.data.skills;
   } catch (e) {
     console.log(e);

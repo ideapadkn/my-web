@@ -54,7 +54,7 @@ const send = () => {
 
 <template>
   <div class="flex justify-center flex-col items-center">
-    <h1 class="text-[58px] font-bold text-[#42446E] mb-5">Contact Me</h1>
+    <h1 class="md:text-[58px] text-[38px] font-bold text-[#42446E] mb-5">Contact Me</h1>
     <form @submit.prevent
       class="flex justify-between flex-col gap-5 py-8 px-4 border-2 mb-5 shadow-lg rounded-[20px] w-[300px]">
       <div class="flex justify-between flex-col relative">

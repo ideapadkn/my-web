@@ -10,7 +10,7 @@ const getData = () => {
   try {
     setTimeout(async () => {
       const res = await axios.get(
-        "https://mocki.io/v1/0d0c6a89-6594-4344-a3fa-3459c8793993"
+        "https://mocki.io/v1/d25c5df7-1bd2-4977-bdf8-debf954ac940"
       );
       websites.value = res.data.websites;
     }, 1500);
@@ -26,13 +26,13 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="text-center mb-[96px]">
+    <div class="text-center mb-6 md:mb-[96px]">
       <h2 class="text-[48px] font-bold text-[#42446E]">Projects</h2>
       <p class="text-[32px] text-[#666666] font-normal">
         Things I’ve built so far
       </p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-10 md:gap-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <ProjectCart v-for="web in websites" :key="web.id" :web="web" />
     </div>
     <!-- SPINNER ORBITS -->

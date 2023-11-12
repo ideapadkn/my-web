@@ -62,6 +62,15 @@
       "stack": "JavaScript, HTML, SASS, GULP",
       "link": "/",
       "github": "https://github.com/ideapadkn/NFTLanding"
+    },
+    {
+      "id": 8,
+      "name": "AirPods Max",
+      "description": "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+      "img": "https://github.com/ideapadkn/AirPodsMax/blob/main/images/maket.png?raw=true",
+      "stack": "JavaScript, HTML, SASS",
+      "link": "https://airpodsmaxkn.netlify.app",
+      "github": "https://github.com/ideapadkn/AirPodsMax"
     }
   ],
   "skills": [

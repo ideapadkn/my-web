@@ -4,7 +4,7 @@ import Projects from "../components/Projects.vue";
 </script>
 
 <template>
-  <div class="mt-16 mb-[200px]">
+  <div class="mt-5 md:mt-16 mb-10 md:mb-[200px]">
     <h1 class="title text-[38px] sm:text-[58px] font-bold text-[#42446E] mb-5">
       Hi 👋,<br />
       My name is<br />
@@ -15,9 +15,9 @@ import Projects from "../components/Projects.vue";
       class="cv-btn inline-block bg-yellow-400 hover:bg-yellow-500 rounded-2xl p-3 text-white hover:translate-x-3"
       href="https://github.com/ideapadkn/my-web/blob/main/src/assets/cv/Karimov%20Kamron.pdf">Download CV</a>
   </div>
-  <div class="text-center mb-[80px]">
+  <div class="text-center mb-5 md:mb-[80px]">
     <h2 class="text-[48px] font-bold text-[#42446E]">My Tech Stack</h2>
-    <p class="text-[32px] text-[#666666] font-normal mb-[96px]">
+    <p class="text-[32px] text-[#666666] font-normal mb-6 md:mb-[96px]">
       Technologies I’ve been working with recently
     </p>
     <div class="flex flex-wrap justify-between">
