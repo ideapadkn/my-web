@@ -25,7 +25,7 @@
         
           https://www.youtube.com/watch?v=doUZK-HFRHs - film dom
 
-        -->  
+        -->
         Vue JS is an area I'm focusing on right now.
       </p>
     </div>
