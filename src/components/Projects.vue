@@ -10,7 +10,7 @@ const getData = () => {
   try {
     setTimeout(async () => {
       const res = await axios.get(
-        "https://mocki.io/v1/c9eb97bb-b394-4c1b-b4fc-3697fc4c33fe"
+        "https://mocki.io/v1/1d1437dc-97fd-4234-8f85-1860f759ab7b"
       );
       websites.value = res.data.websites;
     }, 1500);
